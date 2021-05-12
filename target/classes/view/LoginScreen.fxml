@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
       <ImageView fitHeight="404.0" fitWidth="404.0" layoutX="196.0" layoutY="20.0" opacity="0.5">
          <image>
-            <Image url="@../ARI-Services-LOGO.png" />
+            <Image url="@../Afbeeldingen/ARI-Services-LOGO.png" />
          </image>
       </ImageView>
       <Button fx:id="loginButton" layoutX="300.0" layoutY="403.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="200.0" text="Login" AnchorPane.bottomAnchor="65.80000000000001">
@@ -34,7 +34,17 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <PasswordField layoutX="232.0" layoutY="236.0" prefHeight="26.0" prefWidth="332.0" />
-      <TextField layoutX="234.0" layoutY="176.0" prefHeight="26.0" prefWidth="332.0" />
+      <PasswordField fx:id="wachtwoord" layoutX="232.0" layoutY="236.0" prefHeight="26.0" prefWidth="332.0" />
+      <TextField fx:id="gebruikersnaam" layoutX="234.0" layoutY="176.0" prefHeight="26.0" prefWidth="332.0" />
+      <Label fx:id="onvolledig" alignment="CENTER" contentDisplay="CENTER" layoutX="232.0" layoutY="414.0" prefHeight="18.0" prefWidth="332.0" text="U heeft niet alles ingevoerd" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="onjuist" alignment="CENTER" contentDisplay="CENTER" layoutX="234.0" layoutY="436.0" prefHeight="18.0" prefWidth="332.0" text="Onjuiste gebruikersnaam/wachtwoord" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
