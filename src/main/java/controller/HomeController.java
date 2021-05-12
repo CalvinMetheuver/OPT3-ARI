@@ -12,7 +12,7 @@ public class HomeController {
     @FXML
     private AnchorPane rootPane;
 
-    public void back(MouseEvent mouseEvent) throws IOException {
+    public void verder(MouseEvent mouseEvent) throws IOException{
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/LoginScreen.fxml"));
         rootPane.getChildren().setAll(pane);
     }
