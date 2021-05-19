@@ -1,23 +1,15 @@
 package model;
 
 public class Product {
+    private Model model;
+    private Onderdeel onderdeel;
 
-    private String naam;
-    private String model;
-    private double kost;
-    //oefen
 
-    public Product(String naam, String model, double kost) {
-        this.naam = naam;
+
+    public Product(Model model, Onderdeel onderdeel) {
         this.model = model;
-        this.kost = kost;
+        this.onderdeel = onderdeel;
     }
 
-    public String getNaam() {
-        return naam;
-    }
 
-    public String getModel() {
-        return model;
-    }
 }
