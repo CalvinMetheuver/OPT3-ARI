@@ -11,16 +11,16 @@
 
 <AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <ImageView fitHeight="404.0" fitWidth="404.0" layoutX="196.0" layoutY="20.0" opacity="0.5">
+      <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="200.0" layoutY="20.0" opacity="0.5">
          <image>
-            <Image url="@../ARI-Services-LOGO.png" />
+            <Image url="@../Afbeelding/ARI-Services-LOGO.png" />
          </image>
       </ImageView>
-      <Button fx:id="loginButton" layoutX="300.0" layoutY="403.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="200.0" text="Login" AnchorPane.bottomAnchor="65.80000000000001">
+      <Button fx:id="loginButton" layoutX="300.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="200.0" text="Login">
          <font>
             <Font size="15.0" />
          </font></Button>
-      <Label alignment="CENTER" layoutX="346.0" layoutY="34.0" text="ARI Services" AnchorPane.topAnchor="30.0">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="45.0" prefWidth="200.0" text="ARI Services" AnchorPane.topAnchor="30.0">
          <font>
             <Font size="20.0" />
          </font></Label>
