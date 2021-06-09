@@ -2,7 +2,13 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.InputStream;
 
 public class JavaFXApp extends Application {
 
@@ -15,7 +21,8 @@ public class JavaFXApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/view/LoginScreen.fxml"));
 
         primaryStage.setScene(new Scene(root));
-        primaryStage.setTitle("OPT2 navigation example");
+        primaryStage.setTitle("ARI Services");
+        primaryStage.getIcons().add(new Image("/Afbeelding/ARI-Services-LOGO.png"));
         primaryStage.show();
     }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KBController">
+    <children>
+        <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="200.0" layoutY="20.0" opacity="0.5">
+            <image>
+                <Image url="@../Afbeelding/ARI-Services-LOGO.png" />
+            </image>
+        </ImageView>
+
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="329.0" layoutY="31.0" text="Kosten &amp; Baten" AnchorPane.topAnchor="31.0">
+            <font>
+                <Font size="20.0" />
+            </font></Label>
+
+        <Button fx:id="backButton" layoutX="300.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="25.0" prefWidth="200.0" text="Homepagina">
+            <font>
+                <Font size="15.0" />
+            </font></Button>
+
+    </children>
+</AnchorPane>
