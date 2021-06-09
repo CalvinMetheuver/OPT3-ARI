@@ -2,7 +2,6 @@ package model;
 
 public abstract class Model {
     private String naam;
-    Voorraad voorraad;
 
     public Model() {
         this.naam = "Iphone";
@@ -16,7 +15,7 @@ public abstract class Model {
         return this.naam;
     }
 
-    public final void ask(String naam){
+    public final void samenstelling(String naam){
         if(metBatterij()){
             batterij(new Batterij(naam));
         }

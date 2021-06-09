@@ -26,4 +26,8 @@ public class Login {
         }
 
     }
+
+    public void loguit(){
+        singleton = null;
+    }
 }
