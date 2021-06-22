@@ -6,11 +6,10 @@ import java.util.ArrayList;
 public class Voorraad {
     private static Voorraad singleton = null;
 
-    private ArrayList<Model> products;
-
+    private ArrayList<Product> producten;
 
     private Voorraad() {
-        products = new ArrayList<>();
+        producten = new ArrayList<>();
     }
 
     public static Voorraad getInstance() {
@@ -20,50 +19,62 @@ public class Voorraad {
         return singleton;
     }
 
-    public void addProduct(Model x) {
-        products.add(x);
-        System.out.println(x.getName() + " is toegevoegd aan de voorraad");
+    public void addProduct(Product product) {
+        for (Product p: producten){
+            if(p.getNaam().equals(product.getNaam())){
+                p.setAantal(1);
+                System.out.println("Het product " + product.getNaam() + " is toegevoegd aan de voorraad" );
+                return;
+            }
+        }
+        producten.add(product);
     }
 
-    public void removeProduct(String name){
-        if (products.size() != 0) {
-            for (Model m : products) {
-                if (m.getName().equals(name)) {
-                    System.out.println(name + " is verwijderd");
-                    products.remove(m);
-                    break;
-                } else {
-                    System.out.println(name + " niet gevonden in de voorraad");
+    public void removeProduct(Product product){
+        for(Product p: producten){
+            if(p.getNaam().equals(product.getNaam())){
+                if(p.getAantal()>0) {
+                    p.setAantal(-1);
+                    System.out.println("Het product " + product.getNaam() + " is verwijderd uit de voorraad");
+                } else{
+                    System.out.println("MISLUKT, PRODUCT NIET OP VOORRAAD");
                 }
             }
-        } else{
-            System.out.println("De voorraad is leeg");
         }
+    }
+
+    public Product getProduct(String naam){
+        for (Product p: producten){
+            if (p.getNaam().equals(naam)){
+                return p;
+            }
+        }
+        return null;
     }
 
     public void showAll(){
-        if(products.size() != 0) {
-            for (Model m : products) {
-                System.out.println(m.getName());
+        if(producten.size() != 0) {
+            for (Product m : producten) {
+                System.out.println(m.getAantal() + "x " + m.getNaam());
             }
         }else{
-            System.out.println("De voorraad is leeg");
+            System.out.println("Er staan geen producten opgeslagen in de database");
         }
     }
 
-    public void showProduct(String name){
-        int aantal = 0;
-        if(products.size() != 0){
-            for (Model m:products){
-                if(m.getName().equals(name)){
-                    aantal++;
-                }
+    public ArrayList<Product> checkProducts(){
+        int leeg = 1;
+        ArrayList<Product> op = new ArrayList<>();
+        for (Product p: producten){
+            if(p.getAantal()<= leeg){
+                op.add(p);
             }
         }
-        if(aantal == 1){
-            System.out.println("Er is " + aantal + " " + name );
-        }else {
-            System.out.println("Er zijn " + aantal + " " + name+ "en");
-        }
+        return op;
     }
+
+    public ArrayList<Product> getProducten(){
+        return producten;
+    }
+
 }

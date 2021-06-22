@@ -20,11 +20,13 @@ public class Login {
         return naam;
     }
 
-    public void loginCheck(String  gebruikersnaam, String wachtwoord){
+    public Boolean loginCheck(String  gebruikersnaam, String wachtwoord){
         if (gebruikersnaam.equals("Arriii_2001") && wachtwoord.equals("ww")){
             singleton = new Login("Arriyan");
+            return true;
+        } else {
+            return false;
         }
-
     }
 
     public void loguit(){
