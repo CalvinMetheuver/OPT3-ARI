@@ -11,12 +11,12 @@ public class Scherm extends Product {
     }
 
     @Override
-    protected boolean scherm() {
-        return true;
+    protected boolean batterij() {
+        return false;
     }
 
     @Override
-    protected boolean batterij() {
-        return false;
+    protected boolean scherm() {
+        return true;
     }
 }
