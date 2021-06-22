@@ -73,4 +73,8 @@ public class Voorraad {
         return op;
     }
 
+    public ArrayList<Product> getProducten(){
+        return producten;
+    }
+
 }
