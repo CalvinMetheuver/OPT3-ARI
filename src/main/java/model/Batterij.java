@@ -1,32 +1,22 @@
 package model;
 
-public class Batterij extends Model {
+public class Batterij extends Product {
+    private final String naam = "Batterij";
 
-    private String naam;
-
-    public Batterij(String naam) {
-        super();
-        super.setNaam(super.getName() + " " + naam + " Batterij");
+    public Batterij(String model){
+        super.setNaam(super.getNaam() + model + " " + naam);
+        
+        Voorraad.getInstance().addProduct(this);
     }
 
-    Boolean metBatterij(){
+
+    @Override
+    protected boolean batterij() {
         return true;
     }
 
-
     @Override
-    void batterij(Model naam) {
-        Voorraad.getInstance().addProduct(naam);
+    protected boolean scherm() {
+        return false;
     }
-
-    @Override
-    void screenprotector(Model naam) {
-
-    }
-
-    @Override
-    void scherm(Model naam) {
-
-    }
-
 }
